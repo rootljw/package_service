@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    src\main\resources\js\jquery-1.4.2.js
+    js\jquery-1.4.2.js
+    D:\DEV\package-service\src\main\resources\js\jquery-1.4.2.js
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function chlink() {
+            var url = "/";
+            $.get(url, function(data) {
+                var data1 = data.toString();
+                $("#sp1").html(data + new Date());
+            })
+        }
+        $(function() {
+            timeID = setInterval('chlink()', 5000); //注意:执行的函数需要加引号,否则会报错的
+        });
+    </script>
+
+</head>
+<body>
+<h3>   testttttt </h3>
+</body>
+</html>
